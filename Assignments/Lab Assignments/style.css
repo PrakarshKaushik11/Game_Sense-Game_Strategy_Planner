@@ -413,25 +413,21 @@ body {
 .social-icons a {
     text-decoration: none;
 
-    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     transition: transform 0.2s ease;
 }
 
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
 .social-icons a:hover {
     transform: translateY(-3px);
-}
-
-.social-icons a:nth-child(1) {
-    color: #0a66c2;
-}
-
-.social-icons a:nth-child(2) {
-    color: #111111;
-}
-
-.social-icons a:nth-child(3) {
-    color: #d93025;
 }
 
 
@@ -560,9 +556,7 @@ body {
 }
 
 
-/* =====================================================
-   RESPONSIVE DESIGN
-===================================================== */
+/* =============== RESPONSIVE DESIGN =============== */
 
 @media (max-width: 1200px) {
 
