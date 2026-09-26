@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Lab | Assignment 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" data-view="home"><span class="brand-mark">F</span><span>Focus Lab<small>Frontend assignment 03</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <p class="nav-label">Workspace</p>
+        <button class="nav-item active" data-view="home"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-view="bmi"><span>◌</span> BMI calculator</button>
+        <button class="nav-item" data-view="signup"><span>✦</span> Signup form</button>
+        <button class="nav-item" data-view="themes"><span>◐</span> Color themes</button>
+        <button class="nav-item" data-view="clock"><span>◷</span> Digital clock</button>
+        <button class="nav-item" data-view="todo"><span>✓</span> Todo list</button>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span><span>All systems ready</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div><p class="eyebrow">Interactive workspace</p><p class="date-label" id="todayLabel"></p></div>
+        <button class="profile-button" type="button" aria-label="Profile"><span>AS</span><b>Student</b><i>⌄</i></button>
+      </header>
+
+      <section class="view active" id="home" aria-labelledby="home-title">
+        <div class="hero-heading"><div><p class="eyebrow accent">Lab assignment 03</p><h1 id="home-title">Small tools,<br><em>made useful.</em></h1><p class="intro">A single workspace for practicing the fundamentals of JavaScript, forms, time, and state.</p></div><div class="hero-stamp"><strong>05</strong><span>interactive<br>modules</span></div></div>
+        <div class="overview-grid">
+          <button class="feature-card warm" data-view="bmi"><span class="card-number">01 / 05</span><span class="card-icon">◌</span><h2>BMI calculator</h2><p>Measure your body mass index and understand your result.</p><span class="card-link">Open tool <b>→</b></span></button>
+          <button class="feature-card mint" data-view="signup"><span class="card-number">02 / 05</span><span class="card-icon">✦</span><h2>Signup form</h2><p>Practice clean, helpful validation for new accounts.</p><span class="card-link">Open tool <b>→</b></span></button>
+          <button class="feature-card lilac" data-view="themes"><span class="card-number">03 / 05</span><span class="card-icon">◐</span><h2>Color themes</h2><p>Choose the atmosphere that matches your focus.</p><span class="card-link">Open tool <b>→</b></span></button>
+          <button class="feature-card sky" data-view="clock"><span class="card-number">04 / 05</span><span class="card-icon">◷</span><h2>Digital clock</h2><p>Keep a precise pulse on the current time.</p><span class="card-link">Open tool <b>→</b></span></button>
+          <button class="feature-card ink" data-view="todo"><span class="card-number">05 / 05</span><span class="card-icon">✓</span><h2>Todo list</h2><p>Capture tasks, mark progress, and clear the slate.</p><span class="card-link">Open tool <b>→</b></span></button>
+        </div>
+      </section>
+
+      <section class="view tool-view" id="bmi" aria-labelledby="bmi-title"><div class="section-heading"><div><p class="eyebrow accent">01 / body check-in</p><h1 id="bmi-title">BMI calculator</h1><p>Enter your measurements to calculate your body mass index.</p></div><span class="section-badge">JavaScript</span></div><div class="tool-layout"><form class="panel form-panel" id="bmiForm"><label>Height <span>centimetres</span><input id="height" type="number" min="50" max="250" placeholder="e.g. 170" required></label><label>Weight <span>kilograms</span><input id="weight" type="number" min="10" max="300" placeholder="e.g. 65" required></label><button class="primary-button" type="submit">Calculate BMI <b>→</b></button><p class="form-message" id="bmiMessage" role="alert"></p></form><div class="result-panel" id="bmiResult"><p class="eyebrow">Your result</p><strong class="result-number" id="bmiValue">--</strong><span class="result-category" id="bmiCategory">Waiting for your measurements</span><div class="bmi-scale"><span>Underweight</span><span>Normal</span><span>Overweight</span></div><div class="scale-line"><i></i></div><p class="result-note">BMI is a general guide, not a diagnosis. Healthy ranges can vary between people.</p></div></div></section>
+
+      <section class="view tool-view" id="signup" aria-labelledby="signup-title"><div class="section-heading"><div><p class="eyebrow accent">02 / join the workspace</p><h1 id="signup-title">Create your account</h1><p>All fields are required so your profile is ready to go.</p></div><span class="section-badge">Form validation</span></div><div class="signup-layout"><form class="panel signup-form" id="signupForm" novalidate><div class="two-col"><label>First name<input id="firstName" type="text" placeholder="Alex"><small class="field-error"></small></label><label>Last name<input id="lastName" type="text" placeholder="Stone"><small class="field-error"></small></label></div><label>Email address<input id="email" type="email" placeholder="alex@example.com"><small class="field-error"></small></label><label>Password<input id="password" type="password" placeholder="At least 8 characters"><small class="field-error"></small></label><label class="check-row"><input id="terms" type="checkbox"><span>I agree to the terms and privacy policy.</span></label><button class="primary-button" type="submit">Create account <b>→</b></button><p class="success-message" id="signupSuccess"></p></form><aside class="signup-aside"><span class="big-quote">“</span><blockquote>Good interfaces make the next action feel obvious.</blockquote><p>Four simple checks keep this form clear and friendly.</p></aside></div></section>
+
+      <section class="view tool-view" id="themes" aria-labelledby="themes-title"><div class="section-heading"><div><p class="eyebrow accent">03 / set the mood</p><h1 id="themes-title">Choose your atmosphere</h1><p>Switch the palette of the entire workspace with one click.</p></div><span class="section-badge">Theme picker</span></div><div class="theme-layout"><div class="theme-preview panel"><div class="preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span></div><div class="preview-body"><p class="eyebrow">Current theme</p><h2 id="themeName">Citrus morning</h2><div class="preview-lines"><i></i><i></i><i></i></div><button type="button" class="preview-button">A focused day</button></div></div><div class="theme-options"><button class="theme-option selected" data-theme="citrus"><span class="swatch citrus-swatch"></span><span><b>Citrus morning</b><small>Warm and energetic</small></span><i>✓</i></button><button class="theme-option" data-theme="ocean"><span class="swatch ocean-swatch"></span><span><b>Coastal blue</b><small>Calm and clear</small></span><i>✓</i></button><button class="theme-option" data-theme="berry"><span class="swatch berry-swatch"></span><span><b>Berry night</b><small>Rich and focused</small></span><i>✓</i></button></div></div></section>
+
+      <section class="view tool-view" id="clock" aria-labelledby="clock-title"><div class="section-heading"><div><p class="eyebrow accent">04 / right now</p><h1 id="clock-title">Digital clock</h1><p>A live display that stays in sync with your local time.</p></div><span class="section-badge">Live JavaScript</span></div><div class="clock-panel panel"><div class="clock-face"><span id="clockTime">00:00:00</span><small id="clockPeriod">AM</small></div><div class="clock-meta"><p id="clockDate">Loading date...</p><span class="status-dot"></span><span>Local time</span></div></div></section>
+
+      <section class="view tool-view" id="todo" aria-labelledby="todo-title"><div class="section-heading"><div><p class="eyebrow accent">05 / clear your mind</p><h1 id="todo-title">Todo list</h1><p>Add the next thing, then give it a satisfying check.</p></div><span class="section-badge" id="taskCount">0 tasks</span></div><div class="todo-layout"><form class="todo-form" id="todoForm"><input id="taskInput" type="text" placeholder="What needs doing?" autocomplete="off"><button class="primary-button" type="submit">Add task <b>+</b></button></form><div class="todo-toolbar"><div class="filters"><button class="filter active" type="button" data-filter="all">All</button><button class="filter" type="button" data-filter="active">Active</button><button class="filter" type="button" data-filter="completed">Completed</button></div><button class="clear-button" id="clearCompleted" type="button">Clear completed</button></div><ul class="task-list" id="taskList"></ul><p class="empty-state" id="emptyState">Your list is clear. Add something small to get started.</p></div></section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

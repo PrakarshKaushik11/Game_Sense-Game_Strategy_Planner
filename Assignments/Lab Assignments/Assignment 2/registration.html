@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | StudentHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header"><a class="brand" href="index.html">Student<span>Hub</span></a>
+        <nav aria-label="Primary navigation"><a href="marksheet.html">Marksheet</a><a href="resume.html">Resume</a><a
+                href="menu.html">Menu</a><a href="registration.html">Register</a><a href="login.html">Login</a></nav>
+    </header>
+    <main class="page-shell form-wrap">
+        <div class="form-card">
+            <p class="eyebrow">Assignment 04</p>
+            <h1>Create your <em>account.</em></h1>
+            <p>Join StudentHub to keep your academic work in one place.</p>
+            <form action="#" method="post">
+                <div class="form-row">
+                    <div class="field"><label for="full-name">Full name</label><input id="full-name" name="full-name"
+                            type="text" required></div>
+                    <div class="field"><label for="email">Email address</label><input id="email" name="email"
+                            type="email" required></div>
+                </div>
+                <div class="field"><label for="password">Password</label><input id="password" name="password"
+                        type="password" minlength="8" required></div>
+                <fieldset class="options">
+                    <legend>Study level</legend><label><input type="radio" name="level" value="undergraduate" required>
+                        Undergraduate</label><label><input type="radio" name="level" value="postgraduate">
+                        Postgraduate</label>
+                </fieldset>
+                <fieldset class="options">
+                    <legend>Interests</legend><label><input type="checkbox" name="interest" value="web"> Web
+                        design</label><label><input type="checkbox" name="interest" value="data"> Data science</label>
+                </fieldset>
+                <div class="field"><label for="course">Preferred course</label><select id="course" name="course"
+                        required>
+                        <option value="">Select a course</option>
+                        <option value="frontend">Frontend development</option>
+                        <option value="uiux">UI/UX design</option>
+                        <option value="database">Database systems</option>
+                    </select></div><button class="button" type="submit">Create account</button>
+            </form>
+            <p class="form-note">Already registered? <a href="login.html">Log in</a></p>
+        </div>
+    </main>
+</body>
+
+</html>
